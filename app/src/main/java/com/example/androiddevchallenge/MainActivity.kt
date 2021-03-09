@@ -126,13 +126,13 @@ fun Home() {
         ) {
             Column(modifier = Modifier.rotate(90f)) {
                 Text(
-                    text = "COUNTDOWN", fontSize = 36.sp,
+                    text = stringResource(R.string.txt_countdown), fontSize = 36.sp,
                     fontFamily = rajdhani,
                     fontWeight = FontWeight.Bold,
                     color = colorResource(id = R.color.light_gray)
                 )
                 Text(
-                    text = "TIMER", fontSize = 36.sp,
+                    text = stringResource(R.string.txt_timer), fontSize = 36.sp,
                     color = colorResource(id = R.color.dark_gray),
                     fontFamily = rajdhani,
                     fontWeight = FontWeight.Medium,
@@ -142,7 +142,7 @@ fun Home() {
             Column(modifier = Modifier.padding(end = 64.dp, top = 150.dp)) {
                 if (!onStarted) {
                     Text(
-                        text = "PLAY",
+                        text = stringResource(R.string.txt_play),
                         fontFamily = rajdhani,
                         fontWeight = FontWeight.Medium,
                         color = colorResource(id = R.color.dark_gray),
@@ -159,7 +159,7 @@ fun Home() {
                 } else {
                     Text(
 
-                        text = "PAUSE",
+                        text = stringResource(R.string.txt_pause),
                         fontFamily = rajdhani,
                         fontWeight = FontWeight.Medium,
                         color = colorResource(id = R.color.dark_gray),
@@ -211,9 +211,9 @@ private fun CountDownLeft(time: String) {
         val s = hourInArray[2]
 
 
-        TextTimer(timer = h, timerLabel = "H")
-        TextTimer(timer = m, timerLabel = "M")
-        TextTimer(timer = s, timerLabel = "S")
+        TextTimer(timer = h, timerLabel = stringResource(R.string.txt_hour_label))
+        TextTimer(timer = m, timerLabel = stringResource(R.string.txt_minutes_label))
+        TextTimer(timer = s, timerLabel = stringResource(R.string.txt_seconds_label))
     }
 }
 
