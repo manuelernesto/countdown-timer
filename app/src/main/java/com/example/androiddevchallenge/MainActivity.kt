@@ -21,11 +21,22 @@ import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
-import androidx.compose.runtime.*
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.rotate
@@ -74,7 +85,6 @@ fun DarkPreview() {
     }
 }
 
-
 @Composable
 fun Home() {
 
@@ -98,7 +108,6 @@ fun Home() {
 
             time = timeToString(msToFinished)
 
-
             if (onStop)
                 this.onFinish()
         }
@@ -109,7 +118,6 @@ fun Home() {
             onStarted = false
         }
     }
-
 
     Row(
         modifier = Modifier
@@ -189,8 +197,6 @@ fun Home() {
                             }
                         }
                 )
-
-
             }
         }
     }
@@ -209,7 +215,6 @@ private fun CountDownLeft(time: String) {
         val h = hourInArray[0]
         val m = hourInArray[1]
         val s = hourInArray[2]
-
 
         TextTimer(timer = h, timerLabel = stringResource(R.string.txt_hour_label))
         TextTimer(timer = m, timerLabel = stringResource(R.string.txt_minutes_label))
@@ -240,7 +245,6 @@ fun TextTimer(timer: String, timerLabel: String) {
             fontWeight = FontWeight.Medium,
             modifier = Modifier.padding(start = 5.dp)
         )
-
     }
 }
 
@@ -248,5 +252,5 @@ fun timeToString(time: Long): String {
     val sec = (TimeUnit.MILLISECONDS.toSeconds(time) % 60).toString().padStart(2, '0')
     val min = (TimeUnit.MILLISECONDS.toMinutes(time) % 60).toString().padStart(2, '0')
     val hr = TimeUnit.MILLISECONDS.toHours(time).toString().padStart(2, '0')
-    return "${hr},${min},${sec}"
+    return "$hr,$min,$sec"
 }
