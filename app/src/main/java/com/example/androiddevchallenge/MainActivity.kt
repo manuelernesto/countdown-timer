@@ -137,11 +137,11 @@ fun Home() {
                     text = stringResource(R.string.txt_countdown), fontSize = 36.sp,
                     fontFamily = rajdhani,
                     fontWeight = FontWeight.Bold,
-                    color = colorResource(id = R.color.light_gray)
+                    color = MaterialTheme.colors.primaryVariant
                 )
                 Text(
                     text = stringResource(R.string.txt_timer), fontSize = 36.sp,
-                    color = colorResource(id = R.color.dark_gray),
+                    color = MaterialTheme.colors.primary,
                     fontFamily = rajdhani,
                     fontWeight = FontWeight.Medium,
                 )
@@ -153,7 +153,7 @@ fun Home() {
                         text = stringResource(R.string.txt_play),
                         fontFamily = rajdhani,
                         fontWeight = FontWeight.Medium,
-                        color = colorResource(id = R.color.dark_gray),
+                        color = MaterialTheme.colors.primary,
                         fontSize = 20.sp,
                         modifier = Modifier
                             .padding(bottom = 16.dp)
@@ -170,7 +170,7 @@ fun Home() {
                         text = stringResource(R.string.txt_pause),
                         fontFamily = rajdhani,
                         fontWeight = FontWeight.Medium,
-                        color = colorResource(id = R.color.dark_gray),
+                        color = MaterialTheme.colors.primary,
                         fontSize = 20.sp,
                         modifier = Modifier
                             .padding(bottom = 16.dp)
@@ -183,7 +183,7 @@ fun Home() {
 
                 Text(
                     text = stringResource(R.string.stop_txt),
-                    color = colorResource(id = R.color.dark_gray),
+                    color = MaterialTheme.colors.primary,
                     fontSize = 20.sp,
                     modifier =
                     Modifier
@@ -230,17 +230,17 @@ fun TextTimer(timer: String, timerLabel: String) {
             fontSize = 100.sp,
             fontFamily = rajdhani,
             fontWeight = FontWeight.Bold,
-            color = colorResource(id = R.color.light_gray)
+            color = MaterialTheme.colors.primaryVariant
         )
         Box(
             Modifier
-                .background(color = colorResource(id = R.color.dark_gray))
+                .background(color = MaterialTheme.colors.primary)
                 .size(width = 100.dp, height = 3.dp)
         )
         Text(
             text = timerLabel,
             fontSize = 40.sp,
-            color = colorResource(id = R.color.dark_gray),
+            color = MaterialTheme.colors.primary,
             fontFamily = rajdhani,
             fontWeight = FontWeight.Medium,
             modifier = Modifier.padding(start = 5.dp)
