@@ -13,7 +13,7 @@
     <string name="stop_txt">STOP</string>
     <string name="txt_countdown">COUNTDOWN</string>
     <string name="txt_timer">TIMER</string>
-    <string name="txt_play">PLAY</string>
+    <string name="txt_play">START</string>
     <string name="txt_pause">PAUSE</string>
     <string name="txt_hour_label">H</string>
     <string name="txt_minutes_label">M</string>
